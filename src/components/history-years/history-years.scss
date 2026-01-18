@@ -1,0 +1,51 @@
+.history-years {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 386px;
+  width: 100%;
+  max-width: 958px;
+  z-index: 3;
+
+  @media (max-width: 768px) {
+    margin-top: 163px;
+    top: 0;
+    max-width: 273px;
+  }
+
+  &__item {
+    display: inline-block;
+    font-size: 200px;
+    font-weight: 700;
+    letter-spacing: -2%;
+    -webkit-text-stroke: 1px #000000;
+
+    @media (max-width: 1024px) {
+      font-size: 100px;
+      margin: 80px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 56px;
+      margin: 0;
+
+      -webkit-text-stroke: unset;
+    }
+
+    &:first-child {
+      margin-right: 75px;
+
+      @media (max-width: 768px) {
+        margin-right: 25px;
+      }
+    }
+
+    &_blue {
+      color: #5d5fef;
+    }
+
+    &_red {
+      color: #ef5da8;
+    }
+  }
+}
