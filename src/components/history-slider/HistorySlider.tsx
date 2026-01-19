@@ -51,8 +51,11 @@ export default function HistorySlider({ events, setWrapperRef }: Props) {
         {events.map((event, i) => (
           <SwiperSlide
             key={i}
-            className="history-slider__slide
-          "
+            //   className="history-slider__slide
+            // "
+            className={`history-slider__slide ${
+              i === events.length - 1 ? "history-slider__slide_last" : ""
+            }`}
           >
             <div className="history-card">
               <h4 className="history-card__title">{event.title}</h4>

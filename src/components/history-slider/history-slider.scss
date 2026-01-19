@@ -111,7 +111,8 @@
   }
 }
 
-.swiper-slide-next {
+.swiper-slide-next,
+.history-slider__slide_last {
   @media (max-width: 320px) {
     opacity: 0.5;
   }
