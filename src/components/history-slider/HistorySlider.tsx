@@ -46,13 +46,12 @@ export default function HistorySlider({ events, setWrapperRef }: Props) {
           updateState(s);
         }}
         onSlideChange={updateState}
+        onReachEnd={() => setIsEnd(true)}
         className="history-slider__swiper"
       >
         {events.map((event, i) => (
           <SwiperSlide
             key={i}
-            //   className="history-slider__slide
-            // "
             className={`history-slider__slide ${
               i === events.length - 1 ? "history-slider__slide_last" : ""
             }`}
