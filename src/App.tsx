@@ -17,6 +17,8 @@ function App() {
       <Line className="line_center-vertical line_vertical" />
       <Line className="line_center-horizontal line_horizontal" />
 
+      <Line className="line_vertical line_left line_color" />
+
       <h1 className="main-title">Исторические даты</h1>
 
       <HistoryYears period={historyData[activeIndex]} />
