@@ -110,3 +110,9 @@
     }
   }
 }
+
+.swiper-slide-next {
+  @media (max-width: 320px) {
+    opacity: 0.5;
+  }
+}
