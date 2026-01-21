@@ -1,4 +1,4 @@
-import { useEffect, useRef, useCallback } from "react";
+import { useEffect, useRef, useCallback, useMemo } from "react";
 import gsap from "gsap";
 import { calculateCirclePoints } from "../../utils/calculateCirclePoints";
 import { HistoryPeriod } from "../../types";
@@ -15,9 +15,13 @@ export default function HistoryCircle({
   activeIndex,
   onChange,
 }: Props) {
-  const points = calculateCirclePoints(periods.length, 265, 50);
   const rotatorRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLSpanElement>(null);
+
+  const points = useMemo(
+    () => calculateCirclePoints(periods.length, 265, 50),
+    [periods.length]
+  );
 
   useEffect(() => {
     if (!rotatorRef.current || !textRef.current) return;
